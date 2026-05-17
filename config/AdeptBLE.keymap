@@ -6,8 +6,7 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
 
-#include <dt-bindings/zmk/pointing.h>
-// #include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/mouse.h>
 
 #define BACK LG(LBKT)
 #define FWD  LG(RBKT)
@@ -142,14 +141,20 @@
         &trans                                          &tog MEDIA
       >;
     };
-    extra1 {
-            status = "reserved";
-          >;
-        };
+        extra1 {
+      display-name = "Extra1";
+      bindings = <
+        &trans    &trans    &trans    &trans
+        &trans                        &trans
+      >;
+    };
 
-        extra2 {
-            status = "reserved";
-          >;  
-        };
+    extra2 {
+      display-name = "Extra2";
+      bindings = <
+        &trans    &trans    &trans    &trans
+        &trans                        &trans
+      >;
+    };
   };
-};
+}; 
